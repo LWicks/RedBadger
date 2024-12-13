@@ -1,0 +1,6 @@
+@RedBadger.MartianRobots_HostAddress = http://localhost:5283
+
+GET {{RedBadger.MartianRobots_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
