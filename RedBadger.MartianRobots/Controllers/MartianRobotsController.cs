@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using RedBadger.MartianRobots.Interfaces;
+using RedBadger.MartianRobots.Models;
 
 namespace RedBadger.MartianRobots.Controllers;
 
@@ -6,11 +8,23 @@ namespace RedBadger.MartianRobots.Controllers;
 [ApiController]
 public class MartianRobotsController : ControllerBase
 {
+    private readonly IMartianRobotsService _marsRoverService;
+
+    public MartianRobotsController(IMartianRobotsService marsRoverService)
+    {
+        _marsRoverService = marsRoverService;
+    }
+
     // POST api/martianrobots
     [HttpPost]
-    public ActionResult<string> SimulateMartianRobotMovement()
+    public ActionResult<string> SimulateRoverMovement([FromBody] MartianRobotsRequest request)
     {
-        string result = "OK";
+        if (string.IsNullOrEmpty(request.GridDimensions) || string.IsNullOrEmpty(request.InitialPosition) || string.IsNullOrEmpty(request.Instructions))
+        {
+            return BadRequest("Invalid input data.");
+        }
+
+        string result = _marsRoverService.SimulateRoverMovement(request.GridDimensions, request.InitialPosition, request.Instructions);
         return Ok(result);
     }
 }

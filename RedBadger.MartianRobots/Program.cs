@@ -1,4 +1,6 @@
 
+using RedBadger.MartianRobots.Interfaces;
+
 namespace RedBadger.MartianRobots
 {
     public class Program
@@ -10,6 +12,8 @@ namespace RedBadger.MartianRobots
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSingleton<IMartianRobotsService, MartianRobotsService>();
 
             var app = builder.Build();
 
