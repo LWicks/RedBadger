@@ -17,11 +17,11 @@ public class MartianRobotsController : ControllerBase
 
     // POST api/martianrobots
     [HttpPost]
-    public ActionResult<string> SimulateRoverMovement([FromBody] MartianRobotsRequest request)
+    public IActionResult SimulateRoverMovement([FromBody] MartianRobotsRequest request)
     {
         if (string.IsNullOrEmpty(request.GridDimensions) || string.IsNullOrEmpty(request.InitialPosition) || string.IsNullOrEmpty(request.Instructions))
         {
-            return BadRequest("Invalid input data.");
+            return new BadRequestObjectResult("Invalid input data.");
         }
 
         string result = _marsRoverService.SimulateRoverMovement(request.GridDimensions, request.InitialPosition, request.Instructions);

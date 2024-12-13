@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadger.MartianRobots", "RedBadger.MartianRobots\RedBadger.MartianRobots.csproj", "{0E2E2E8C-A887-4F56-B733-84B0DFF20115}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadger.MartianRobots.Tests", "RedBadger.MartianRobots.Tests\RedBadger.MartianRobots.Tests.csproj", "{B4B601B4-E598-407B-8EFF-4DBEEF94E60A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0E2E2E8C-A887-4F56-B733-84B0DFF20115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E2E2E8C-A887-4F56-B733-84B0DFF20115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E2E2E8C-A887-4F56-B733-84B0DFF20115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B601B4-E598-407B-8EFF-4DBEEF94E60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B601B4-E598-407B-8EFF-4DBEEF94E60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B601B4-E598-407B-8EFF-4DBEEF94E60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B601B4-E598-407B-8EFF-4DBEEF94E60A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
